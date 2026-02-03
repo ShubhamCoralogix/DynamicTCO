@@ -3,6 +3,10 @@
 
 This module automates **Dynamic TCO** for Coralogix by enabling or disabling **application-specific TCO policies** based on usage thresholds defined in a simple configuration file.
 
+## Caution
+- If there are existing policies in the Coralogix UI that are not defined in your local.tco_policies_logs list, Terraform assumes they are "extra" or "drifted" and deletes them to match your code exactly.
+- [Solution] If you want to keep using the plural resource, you must add every existing policy in your Coralogix account into your locals block. This ensures Terraform "knows" about them and won't delete them during the next apply
+
 ## Features
 - Per-application thresholds
 - Automatic quarantine of noisy apps
