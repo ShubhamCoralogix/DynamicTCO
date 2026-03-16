@@ -1,6 +1,6 @@
-shubham-eks-cluster-k8s-logs
-cx-server-payments
-cx-client-shopping-cart
-cloudwatch-ss-test
-aws
-cx-redis
+shubham-eks-cluster-k8s-logs, 100
+cx-server-payments, 10
+cx-client-shopping-cart, 1
+cloudwatch-ss-test, 1
+aws, 2
+cx-redis, 1
