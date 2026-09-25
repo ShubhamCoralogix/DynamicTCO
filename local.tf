@@ -63,6 +63,10 @@ locals {
       applications         = p.applications
       subsystems           = p.subsystems
       archive_retention_id = p.archive_retention_id
+      # Preserve newer TCO fields so unmanaged policies keep their routing
+      targets                       = p.targets
+      dpxl_expression               = p.dpxl_expression
+      quota_based_priority_override = p.quota_based_priority_override
     }
     if !contains(local.managed_policy_names, p.name)
   ]
@@ -86,7 +90,11 @@ locals {
         names     = [app]
         rule_type = "is"
       }
-      subsystems = null
+      subsystems                    = null
+      archive_retention_id          = null
+      targets                       = null
+      dpxl_expression               = null
+      quota_based_priority_override = null
     }
   ]
 
@@ -110,6 +118,10 @@ locals {
         names     = [sub]
         rule_type = "is"
       }
+      archive_retention_id          = null
+      targets                       = null
+      dpxl_expression               = null
+      quota_based_priority_override = null
     }
   ]
 
