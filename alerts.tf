@@ -40,7 +40,7 @@ resource "coralogix_alert" "app_high_usage_block" {
           condition = {
             condition_type = "MORE_THAN"
             threshold      = local.app_limits[each.value]
-            of_the_last    = "5m"
+            of_the_last    = "5_MINUTES"
             for_over_pct   = 100
           }
           override = {
@@ -94,7 +94,7 @@ resource "coralogix_alert" "subsystem_high_usage_block" {
           condition = {
             condition_type = "MORE_THAN"
             threshold      = local.subsystem_limits[each.value]
-            of_the_last    = "5m"
+            of_the_last    = "5_MINUTES"
             for_over_pct   = 100
           }
           override = {
@@ -162,7 +162,7 @@ resource "coralogix_alert" "global_low_usage_recovery" {
           condition = {
             condition_type = "LESS_THAN"
             threshold      = local.total_system_limit
-            of_the_last    = "10m"
+            of_the_last    = "10_MINUTES"
             for_over_pct   = 100
           }
           override = {

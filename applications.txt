@@ -3,14 +3,7 @@
 # type = "subsystem" for subsystem-wise policy
 
 # ── Application-wise entries ──────────────────────────────
-app, shubham-eks-cluster-k8s-logs, 100
-app, cx-server-payments, 10
-app, cx-client-shopping-cart, 1
-app, cloudwatch-ss-test, 1
-app, aws, 2
-app, cx-redis, 1
+app, zee-test, 10
 
 # ── Subsystem-wise entries ────────────────────────────────
-subsystem, payment-service, 15
-subsystem, cart-service, 5
-subsystem, auth-service, 8
+subsystem, cx-rum, 5
