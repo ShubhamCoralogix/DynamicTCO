@@ -2,7 +2,7 @@ variable "coralogix_api_key" {
   type        = string
   sensitive   = true
   description = "Your Coralogix Send-Your-Data API Key. Set via env var TF_VAR_coralogix_api_key"
-  default = "cxtp_ECljKMJH3IawafTn7QoJKShVziEzq9"
+  default = "XXXXXX"
 }
 
 variable "coralogix_domain" {
