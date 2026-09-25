@@ -4,6 +4,7 @@
 
 # ── Application-wise entries ──────────────────────────────
 app, zee-test, 10
-
+app, eks-cluster,10
 # ── Subsystem-wise entries ────────────────────────────────
 subsystem, cx-rum, 5
+subsystem,kube-system, 3
